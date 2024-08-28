@@ -1,0 +1,131 @@
+body {
+    background: linear-gradient(90deg, #7400B8, #6930C3, #5E60CE, #5390D9, #48BFE3, #56CFE1, #64DFDF, #72EFDD, #80FFDB) no-repeat;
+    margin: 0;
+    font-family: var(--font-family);
+    
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: 
+    repeating-linear-gradient(
+        230deg,
+        transparent 0 50px,
+        #fff1 50px 51px
+    ),
+    repeating-linear-gradient(
+        320deg,
+        transparent 0 50px,
+        #fff1 50px 51px
+    );
+    position: relative;
+}
+
+form {
+    background-color: #eee;
+    width: max-content;
+    padding: 5px;
+    margin: 30px;
+    border-radius: 24px;
+    display: flex;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.116) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.39) 0px -2px 6px 0px inset;
+}
+
+form input, button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: large;
+    cursor: pointer;
+}
+
+form input::-webkit-color-swatch-wrapper{
+    padding: 0;
+}
+
+form input::-webkit-color-swatch{
+    border-radius: 50%;
+}
+
+/* Parte que o user insere o texto*/
+#list textarea {
+    all: unset;
+    /* resize: both; */ /* Descomentar para poder dar resize na note*/ 
+    color: #d6d6d6;
+    width: 100%; 
+    max-width: 100%;
+    height: 100%; /* Adiciona altura 100% para garantir que o textarea ocupe o espaço disponível */
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    padding-left: 5px;
+    overflow: auto; /* Adiciona rolagem se necessário */
+}
+
+/* Nota */
+#list .note {
+    background-color: #333;
+    width: max-content;
+    min-width: 400px;
+    min-height: 350px;
+    border-top: 30px solid #5dc4ff;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px #0004;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    box-shadow: rgba(0, 0, 0, 0.301) -20px -5px 30px 0, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(0, 0, 0, 0.425) 0px -2px 20px 0px inset;
+}
+
+/*Titulo da Nota*/
+/* #list .note .title {
+    position: absolute;
+    bottom: 100%;
+    left: 10;
+    color: #333;
+    height: 30px;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+} */
+
+#list .note .logo {
+    position: absolute;
+    bottom: 100%;
+    left: 10;
+    height: 30px;
+    font-family: cursive;
+    font-size: large;
+    pointer-events: none;
+}
+
+/*Botão de fechar note*/
+#list .note .close {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    height: 30px;
+    font-family: cursive;
+    font-size: large;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+
+@keyframes gradient {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+  
